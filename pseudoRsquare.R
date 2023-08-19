@@ -6,6 +6,9 @@ pseudoRsquare <- function(model.1, model.2, component = "residual"){
       model.1 = VarCorr(model.1); model.2 = VarCorr(model.2)
       error1 = as.numeric(model.1[nrow(model.1),"Variance"])
       error2 = as.numeric(model.2[nrow(model.2),"Variance"])
+      cat("\n==========PseudoR2 a la Shiverdecker & LeBreton (2019)==========\n)
+      cat("\n============= Formula is: error1 - error2 / error1 =============\n)
+      cat("\n = Proportion of error variance in Model 1 explained by Model 2\n")
       print(round((error1 - error2) / error1, 10))
     }
     if(component == "(Intercept)"){
