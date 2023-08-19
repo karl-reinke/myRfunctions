@@ -31,11 +31,6 @@ modelreport <- function(model, request ="all"){
   print.data.frame(result, row.names = FALSE)
 }
 
-modelreport(model = model.1, request = "all")
-modelreport(model = model.1, request = "terms")
-modelreport(model = model.1, request = "params")
-modelreport(model = model.3.lme)
-
 # Group all Models into a single Table. This is for nested models only #
 concat_modelreports <- function(num_mod, mod_list){
   if(num_mod == length(mod_list)){
