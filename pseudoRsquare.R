@@ -16,7 +16,7 @@ pseudoRsquare <- function(model.1, model.2, component = "residual"){
     }
   }
   # lmerMod is class w lme4() but lmerModLmerTest is class w lmerTest(), extract first 7 characters
-  if(substr(class(model_1)[1], 1, 7) == "lmerMod" & substr(class(model_2)[1], 1, 7) == "lmerMod"){
+  if(substr(class(model.1)[1], 1, 7) == "lmerMod" & substr(class(model.2)[1], 1, 7) == "lmerMod"){
     if(component == "residual"){
       error1 = attr(VarCorr(model.1), "sc")^2
       error2 = attr(VarCorr(model.2), "sc")^2
